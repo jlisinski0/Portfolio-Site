@@ -1,33 +1,49 @@
 'use client'
 
 import { NavItems } from './NavItems'
+import NavMobile from './NavMobile'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
 
 export default function Nav() {
 	const [isVisible, setIsVisible] = useState(false)
 
+	useEffect(() => {
+		if (isVisible) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = ''
+		}
+
+		return () => {
+			document.body.style.overflow = ''
+		}
+	}, [isVisible])
+
 	return (
-		<nav className='w-full h-18 bg-accentTwo pt-3 px-3'>
-			<div className='flex justify-between w-full h-full max-w-300 mx-auto bg-red-600 rounded-2xl mx-4'>
-				<div>
-					<img src='' alt='' />
-				</div>
-				<ul className='hidden'>
-					{NavItems.map(item => (
-						<li className='cursor-pointer' key={item.id}>
-							<Link href={item.href}>{item.name}</Link>
-						</li>
-					))}
-				</ul>
-				<button onClick={() => setIsVisible(prev => !prev)} className='cursor-pointer p-4 h-full w-12 relative'>
-					<div className='flex flex-col justify-center gap-0.5 w-full h-full relative'>
-						<span className='bg-black w-full h-0.5 block'></span>
-						<span className='bg-black w-full h-0.5 block'></span>
+		<>
+			<nav className='fixed top-0 left-0 w-full h-17 pt-3 px-10 z-30'>
+				<div className='flex justify-between w-full h-full max-w-300 mx-auto bg-white/90  rounded-2xl lg:px-8'>
+					<div>
+						<img src='' alt='' />
 					</div>
-				</button>
-			</div>
-			{isVisible && <div>test</div>}
-		</nav>
+					<ul className='hidden lg:flex lg:justify-end lg:items-center w-full h-full gap-10'>
+						{NavItems.map(item => (
+							<li className='cursor-pointer p-4 hover:opacity-80 transition-opacity duration-300 last:bg-accentOne last:text-white last:px-5 last:py-1.5 last:rounded-2xl ' key={item.id}>
+								<Link href={item.href}>{item.name}</Link>
+							</li>
+						))}
+					</ul>
+					<button onClick={() => setIsVisible(prev => !prev)} aria-label={`${isVisible ? 'Close menu' : 'Open menu'}`} className='cursor-pointer p-4 h-full w-11 relative z-50 lg:hidden'>
+						<div className='flex flex-col justify-center  w-full h-full relative'>
+							<motion.span className='bg-black w-full h-0.5 block absolute left-0 top-1/2' style={{ originX: 0.5, originY: 0.5 }} animate={isVisible ? { rotate: 45, y: 0 } : { rotate: 0, y: -2 }} />
+							<motion.span className='bg-black w-full h-0.5 block absolute left-0 top-1/2' style={{ originX: 0.5, originY: 0.5 }} animate={isVisible ? { rotate: -45, y: 0 } : { rotate: 0, y: 2 }} />
+						</div>
+					</button>
+				</div>
+			</nav>
+			<AnimatePresence>{isVisible && <NavMobile />}</AnimatePresence>
+		</>
 	)
 }
