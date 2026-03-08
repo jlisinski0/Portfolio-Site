@@ -7,41 +7,11 @@ html {
 @theme {
 	--color-white: #f5f2f2;
 	--color-black: #26251e;
+	--color-gray: #868484;
 	--color-accentOne: #375ae8;
 	--color-accentTwo: #dfddce;
+	--font-arial: Arial, sans-serif;
 }
-
 .gradient {
-	background-image: linear-gradient(
-		0deg,
-		hsl(0deg 13% 95%) 0%,
-		hsl(2deg 16% 95%) 0%,
-		hsl(5deg 19% 95%) 1%,
-		hsl(7deg 21% 95%) 1%,
-		hsl(9deg 24% 94%) 2%,
-		hsl(11deg 26% 94%) 4%,
-		hsl(13deg 27% 93%) 6%,
-		hsl(14deg 29% 93%) 8%,
-		hsl(16deg 30% 93%) 11%,
-		hsl(18deg 31% 92%) 14%,
-		hsl(20deg 31% 92%) 17%,
-		hsl(22deg 32% 91%) 21%,
-		hsl(23deg 32% 91%) 26%,
-		hsl(25deg 32% 90%) 31%,
-		hsl(27deg 32% 90%) 36%,
-		hsl(29deg 31% 89%) 42%,
-		hsl(31deg 31% 89%) 49%,
-		hsl(33deg 30% 88%) 56%,
-		hsl(35deg 29% 88%) 63%,
-		hsl(37deg 28% 87%) 70%,
-		hsl(40deg 27% 86%) 77%,
-		hsl(43deg 25% 86%) 84%,
-		hsl(46deg 24% 85%) 90%,
-		hsl(49deg 23% 85%) 95%,
-		hsl(53deg 21% 84%) 100%
-	);
-}
-
-body {
-	font-family: Arial, sans-serif;
+	background-image: linear-gradient(0deg, hsl(0deg 13% 95%) 0%, hsl(10deg 25% 94%) 33%, hsl(19deg 31% 92%) 52%, hsl(28deg 31% 90%) 68%, hsl(38deg 28% 87%) 83%, hsl(53deg 21% 84%) 100%);
 }

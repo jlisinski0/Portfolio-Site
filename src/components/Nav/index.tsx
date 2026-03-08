@@ -24,7 +24,7 @@ export default function Nav() {
 	return (
 		<>
 			<nav className='fixed top-0 left-0 w-full h-17 pt-3 px-10 z-30'>
-				<div className='flex justify-between w-full h-full max-w-300 mx-auto bg-white/90  rounded-2xl lg:px-8'>
+				<div className={`flex justify-between w-full h-full max-w-6xl mx-auto bg-white/90  border-black/10 rounded-2xl lg:px-8 ${isVisible ? 'border-none' : 'border'}`}>
 					<div>
 						<img src='' alt='' />
 					</div>
