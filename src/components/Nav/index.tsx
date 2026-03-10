@@ -3,6 +3,8 @@
 import { NavItems } from './NavItems'
 import NavMobile from './NavMobile'
 import Link from 'next/link'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 
@@ -21,12 +23,19 @@ export default function Nav() {
 		}
 	}, [isVisible])
 
+	useEffect(() => {
+		AOS.init({
+			duration: 200,
+			once: true,
+		})
+	}, [])
+
 	return (
 		<>
-			<nav className='fixed top-0 left-0 w-full h-17 pt-3 px-10 z-30'>
+			<nav className='fixed top-0 left-0 w-full h-17 pt-3 px-10 z-30' data-aos='fade-down'>
 				<div className={`flex justify-between w-full h-full max-w-6xl mx-auto bg-white/90  border-black/10 rounded-2xl lg:px-8 ${isVisible ? 'border-none' : 'border'}`}>
 					<div>
-						<img src='' alt='' />
+						<img src='icon' alt='icon' />
 					</div>
 					<ul className='hidden lg:flex lg:justify-end lg:items-center w-full h-full gap-10'>
 						{NavItems.map(item => (

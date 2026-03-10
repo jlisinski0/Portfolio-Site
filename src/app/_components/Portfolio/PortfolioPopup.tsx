@@ -25,8 +25,7 @@ export default function PortfolioPopup({ item, onClose }: { item: PortfolioItem;
 						<div className='pb-10 '>
 							<p>{item.text}</p>
 						</div>
-						<Image className='w-70' src={item.img} alt='' />
-						
+						<Image className='w-70' src={item.img} alt='x' />
 					</div>
 				</div>
 			</div>
