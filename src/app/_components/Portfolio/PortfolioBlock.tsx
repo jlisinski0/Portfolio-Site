@@ -5,6 +5,7 @@ import { PortfolioItems } from './PortfolioItems'
 import PortfolioPopup from './PortfolioPopup'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { ReactNode } from 'react'
 import { useState, useEffect } from 'react'
 import { StaticImageData } from 'next/image'
 
@@ -13,7 +14,8 @@ type PortfolioItem = {
 	heading: string
 	img: StaticImageData | string
 	alt: string
-	text: string
+	icon: StaticImageData | string
+	text: ReactNode
 }
 
 export default function PortfolioBlock() {
@@ -30,9 +32,9 @@ export default function PortfolioBlock() {
 		<>
 			<div className='flex  w-full h-full pt-15 text-white'>
 				<div className='flex justify-center items-center flex-wrap w-full h-full max-w-6xl flex-1 mx-5 gap-10'>
-					{PortfolioItems.map(({ id, heading, img, alt, text }) => (
+					{PortfolioItems.map(({ id, heading, img, alt, text, icon }) => (
 						<button
-							onClick={() => setSelectedItem({ id, heading, img, alt, text })}
+							onClick={() => setSelectedItem({ id, heading, img, alt, text, icon })}
 							className='flex flex-col items-center cursor-pointer hover:brightness-75 transition-[filter] duration-300'
 							data-aos='fade-up'
 							key={id}>
