@@ -34,8 +34,10 @@ export default function Nav() {
 		<>
 			<nav className='fixed top-0 left-0 w-full h-17 pt-3 px-10 z-30' data-aos='fade-down'>
 				<div className={`flex justify-between w-full h-full max-w-6xl mx-auto bg-white/90  border-black/10 rounded-2xl lg:px-8 ${isVisible ? 'border-none' : 'border'}`}>
-					<div>
-						<img src='icon' alt='icon' />
+					<div className='w-full h-full'>
+						<Link href='/' className='flex items-center justify-center w-25 h-full cursor-pointer'>
+							<img src='icon' alt='icon' />
+						</Link>
 					</div>
 					<ul className='hidden lg:flex lg:justify-end lg:items-center w-full h-full gap-10'>
 						{NavItems.map(item => (
