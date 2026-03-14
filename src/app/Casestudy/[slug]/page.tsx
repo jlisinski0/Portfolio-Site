@@ -1,5 +1,40 @@
 import { PortfolioItems } from '@/src/app/_components/Portfolio/PortfolioItems'
 import CasestudyInfo from './CasestudyInfo'
+import { Metadata } from 'next'
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+	const { slug } = await params
+	const item = PortfolioItems.find(i => i.slug === slug)
+
+	if (!item) return { title: 'Jędrzej Lisiński - Not found' }
+
+	return {
+		title: `Jędrzej Lisiński - ${item.heading}`,
+		description: `${item.description}`,
+
+		alternates: {
+			canonical: `https://jlisinski.dev${item.href}`,
+		},
+
+		robots: {
+			index: true,
+			follow: true,
+		},
+
+		openGraph: {
+			type: 'website',
+			title: `Jędrzej Lisiński - ${item.heading}`,
+			description: `${item.description}`,
+			url: `https://jlisinski.dev${item.href}`,
+		},
+
+		twitter: {
+			card: 'summary_large_image',
+			title: `Jędrzej Lisiński - ${item.heading}`,
+			description: `${item.description}`,
+		},
+	}
+}
 
 export default async function Casestudy({ params }: { params: { slug: string } }) {
 	const { slug } = await params

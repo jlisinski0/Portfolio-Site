@@ -8,6 +8,7 @@ type PortfolioItem = {
 	slug: string
 	img: StaticImageData | string
 	alt: string
+	description: string
 }
 
 export const PortfolioItems: PortfolioItem[] = [
@@ -18,6 +19,7 @@ export const PortfolioItems: PortfolioItem[] = [
 		href: '/Casestudy/restauracja',
 		img: restaurant,
 		alt: 'Restauracja.pl',
+		description: 'Case study of a restaurant website built with Next.js and Tailwind CSS for my portfolio. A front-end project without a backend, created for my portfolio.',
 	},
 	{
 		id: 2,
@@ -26,5 +28,6 @@ export const PortfolioItems: PortfolioItem[] = [
 		href: '/Casestudy/test',
 		img: restaurant,
 		alt: 'test.pl',
+		description: 'asd',
 	},
 ]

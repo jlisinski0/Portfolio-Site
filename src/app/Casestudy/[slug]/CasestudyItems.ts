@@ -48,7 +48,7 @@ export const CasestudyItems: Record<string, CasestudyItem[]> = {
 		{
 			id: 1,
 			textLeft: 'Client',
-			textRight: 'Piotrek',
+			textRight: 'Jędrzej',
 			img: user,
 			alt: 'Person',
 		},
@@ -62,14 +62,14 @@ export const CasestudyItems: Record<string, CasestudyItem[]> = {
 		{
 			id: 3,
 			textLeft: 'Lead time',
-			textRight: '12 dni',
+			textRight: '12 days',
 			img: clock,
 			alt: 'Clock',
 		},
 		{
 			id: 4,
 			textLeft: 'Domain',
-			textRight: 'test.com',
+			textRight: 'jlisinski.dev',
 			img: suitcase,
 			alt: 'Suitcase',
 		},

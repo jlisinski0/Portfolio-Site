@@ -1,6 +1,7 @@
 'use client'
 
 import PortfolioBlock from './PortfolioBlock'
+import Section from '@/src/components/ui/Section'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
@@ -14,7 +15,7 @@ export default function Portfolio() {
 	}, [])
 
 	return (
-		<section className=' min-h-dvh w-full bg-white' id='Portfolio'>
+		<Section id='Portfolio'>
 			<div className='flex flex-col justify-center w-full h-full max-w-6xl mx-auto py-20'>
 				<div className='flex flex-col items-center'>
 					<h2 className='text-3xl md:text-3xl lg:text-5xl font-bold bg-[url("/images/line.svg")] bg-bottom bg-no-repeat' data-aos='fade-up'>
@@ -26,6 +27,6 @@ export default function Portfolio() {
 					<PortfolioBlock />
 				</div>
 			</div>
-		</section>
+		</Section>
 	)
 }

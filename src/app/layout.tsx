@@ -9,20 +9,28 @@ const inter = Inter({
 
 export const metadata: Metadata = {
 	title: 'Jędrzej Lisiński - Frontend Developer',
-	description: 'Frontend developer specjalizujący sie w React i Next.js. Sprawdź moje projekty i jeśli ci będziesz zainteresowany, zachęcam do kontaktu',
+	description: `Frontend developer specializing in React and Next.js. Check out my projects, and if you're interested, feel free to reach out`,
 
 	alternates: {
 		canonical: 'https://jlisinski.dev/',
 	},
 
+	robots: {
+		index: true,
+		follow: true,
+	},
+
 	openGraph: {
+		type: 'website',
 		title: 'Jędrzej Lisiński - Frontend Developer',
-		description: 'Frontend developer specjalizujący sie w React i Next.js. Sprawdź moje projekty i jeśli ci będziesz zainteresowany, zachęcam do kontaktu',
+		description: `Frontend developer specializing in React and Next.js. Check out my projects, and if you're interested, feel free to reach out`,
+		url: 'https://jlisinski.dev/',
 	},
 
 	twitter: {
 		card: 'summary_large_image',
 		title: 'Jędrzej Lisiński - Frontend Developer',
+		description: `Frontend developer specializing in React and Next.js. Check out my projects, and if you're interested, feel free to reach out`,
 	},
 }
 
@@ -32,12 +40,11 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='pl'>
+		<html lang='en'>
 			<body className={`${inter.className} antialiased`}>
-				<Nav/>
+				<Nav />
 				{children}
-				</body>
+			</body>
 		</html>
 	)
 }
-
