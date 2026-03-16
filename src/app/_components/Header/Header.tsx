@@ -21,8 +21,9 @@ export default function Header() {
 					<div className='max-w-[17em] mt-2'>
 						<p className='text-sm md:text-base'>A front-end developer with a head full of vision and a desire to grow.</p>
 					</div>
-					<div data-aos='fade-up' data-aos-duration='1200' className='mt-5'>
+					<div data-aos='fade-up' data-aos-duration='1200' className='flex gap-2 mt-5'>
 						<Button href='#Portfolio'>Portfolio</Button>
+						<Button>CV</Button>
 					</div>
 				</div>
 			</div>

@@ -20,7 +20,7 @@ export default function CasestudyItem({ item }: CasestudyInfoProps) {
 				currentItems.map(item => (
 					<div key={item.id}>
 						<div className='flex justify-between w-full'>
-							<div className='flex  gap-3'>
+							<div className='flex gap-3'>
 								<Image className='w-7' src={item.img} alt={item.alt} />
 								<p>{item.textLeft}</p>
 							</div>

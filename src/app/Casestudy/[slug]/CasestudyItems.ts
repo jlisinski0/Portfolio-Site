@@ -44,7 +44,7 @@ export const CasestudyItems: Record<string, CasestudyItem[]> = {
 		},
 	],
 
-	test: [
+	jlisinski: [
 		{
 			id: 1,
 			textLeft: 'Client',

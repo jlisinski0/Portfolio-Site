@@ -1,10 +1,16 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Cormorant } from 'next/font/google'
 import Nav from '@/src/components/Nav'
 import './globals.css'
 
 const inter = Inter({
 	subsets: ['latin', 'latin-ext'],
+})
+
+const cormorant = Cormorant({
+	subsets: ['latin', 'latin-ext'],
+	variable: '--font-cormorant',
 })
 
 export const metadata: Metadata = {
@@ -41,7 +47,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${inter.className} antialiased`}>
+			<body className={`${inter.className} ${cormorant.variable} antialiased`}>
 				<Nav />
 				{children}
 			</body>

@@ -23,11 +23,11 @@ export const PortfolioItems: PortfolioItem[] = [
 	},
 	{
 		id: 2,
-		heading: 'test.pl',
-		slug: 'test',
-		href: '/Casestudy/test',
+		heading: 'jlisinski.dev',
+		slug: 'jlisinski',
+		href: '/Casestudy/jlisinski',
 		img: restaurant,
-		alt: 'test.pl',
+		alt: 'jlisinski.pl',
 		description: 'asd',
 	},
 ]
