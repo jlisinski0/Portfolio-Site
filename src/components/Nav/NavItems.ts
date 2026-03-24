@@ -7,8 +7,8 @@ type NavItem = {
 export const NavItems: NavItem[] = [
 	{
 		id: 1,
-		name: 'Portfolio',
-		href: '#Portfolio',
+		name: 'Projects',
+		href: '#Projects',
 	},
 	{
 		id: 2,

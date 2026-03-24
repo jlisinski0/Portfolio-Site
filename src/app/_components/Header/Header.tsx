@@ -22,7 +22,7 @@ export default function Header() {
 						<p className='text-sm md:text-base'>A front-end developer with a head full of vision and a desire to grow.</p>
 					</div>
 					<div data-aos='fade-up' data-aos-duration='1200' className='flex gap-2 mt-5'>
-						<Button href='#Portfolio'>Portfolio</Button>
+						<Button href='#Projects'>Projects</Button>
 						<Button>CV</Button>
 					</div>
 				</div>

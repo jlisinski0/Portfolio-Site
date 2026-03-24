@@ -1,15 +1,5 @@
-import { StaticImageData } from 'next/image'
+import { PortfolioItem } from '@/src/types/index'
 import restaurant from '@/public/restaurant.png'
-
-type PortfolioItem = {
-	id: number
-	heading: string
-	href?: string
-	slug: string
-	img: StaticImageData | string
-	alt: string
-	description: string
-}
 
 export const PortfolioItems: PortfolioItem[] = [
 	{

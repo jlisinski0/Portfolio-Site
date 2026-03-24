@@ -14,11 +14,11 @@ export default function Portfolio() {
 	}, [])
 
 	return (
-		<section className='min-h-dvh w-full bg-white border border-black/5' id='Portfolio'>
+		<section className='min-h-dvh w-full bg-white border border-black/5' id='Projects'>
 			<div className='divContainer'>
 				<div className='flex flex-col items-center'>
 					<h2 className='heading line' data-aos='fade-up'>
-						Portfolio
+						Projects
 					</h2>
 					<p className='text-xs md:text-sm lg:text-base' data-aos='fade-up' data-aos-duration='1200'>
 						My visions in practice.

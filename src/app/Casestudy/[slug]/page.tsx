@@ -1,6 +1,13 @@
-import { PortfolioItems } from '@/src/app/_components/Portfolio/PortfolioItems'
+import { PortfolioItems } from '@/src/data'
 import CasestudyInfo from './CasestudyInfo'
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+
+export async function generateStaticParams() {
+	return PortfolioItems.map(item => ({
+		slug: item.slug,
+	}))
+}
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
 	const { slug } = await params
@@ -40,10 +47,10 @@ export default async function Casestudy({ params }: { params: { slug: string } }
 	const { slug } = await params
 	const item = PortfolioItems.find(i => i.slug === slug)
 
-	if (!item) return <p>Nie znaleziono produktu</p>
+	if (!item) return notFound()
 
 	return (
-		<section className='min-h-dvh bg-white pt-30 px-10'>
+		<section className='min-h-dvh bg-white py-30 px-10'>
 			<div className='flex flex-col lg:flex-row items-center justify-center max-w-6xl mx-auto w-full h-full  lg:px-0'>
 				<CasestudyInfo item={item} />
 				<div className='lg:max-w-xl max-w-6xl px-10'>

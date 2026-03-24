@@ -1,12 +1,9 @@
 import Image from 'next/image'
-import { CasestudyItems } from './CasestudyItems'
+import { CasestudyItems } from '@/src/data'
+import { PortfolioItemSlug } from '@/src/types'
 
-type PortfolioItem = {
-	slug: string
-}
-
-interface CasestudyInfoProps {
-	item: PortfolioItem
+type CasestudyInfoProps = {
+	item: PortfolioItemSlug
 }
 
 export default function CasestudyItem({ item }: CasestudyInfoProps) {
@@ -17,14 +14,14 @@ export default function CasestudyItem({ item }: CasestudyInfoProps) {
 			{currentItems.length === 0 ? (
 				<p className='text-center'>Error there's no item</p>
 			) : (
-				currentItems.map(item => (
-					<div key={item.id}>
+				currentItems.map(casestudyItem => (
+					<div key={casestudyItem.id}>
 						<div className='flex justify-between w-full'>
 							<div className='flex gap-3'>
-								<Image className='w-7' src={item.img} alt={item.alt} />
-								<p>{item.textLeft}</p>
+								<Image className='w-7' src={casestudyItem.img} alt={casestudyItem.alt} />
+								<p>{casestudyItem.textLeft}</p>
 							</div>
-							<p>{item.textRight}</p>
+							<p>{casestudyItem.textRight}</p>
 						</div>
 						<div className='w-full bg-black/20 h-px my-2'></div>
 					</div>

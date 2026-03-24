@@ -1,6 +1,5 @@
 'use client'
 
-import Section from '@/src/components/ui/Section'
 import AboutContent from './AboutContent'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -15,7 +14,7 @@ export default function About() {
 	}, [])
 
 	return (
-		<Section id='About'>
+		<section className='h-[90dvh] w-full bg-white' id='About'>
 			<div className='divContainer'>
 				<div className='flex flex-col items-center w-full h-full'>
 					<h2 className='heading line' data-aos='fade-up'>
@@ -27,6 +26,6 @@ export default function About() {
 					<AboutContent />
 				</div>
 			</div>
-		</Section>
+		</section>
 	)
 }

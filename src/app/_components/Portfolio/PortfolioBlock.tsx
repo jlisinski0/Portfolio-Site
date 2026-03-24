@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { PortfolioItems } from './PortfolioItems'
+import { PortfolioItems } from '@/src/data'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 

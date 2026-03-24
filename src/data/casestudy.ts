@@ -1,16 +1,8 @@
-import { StaticImageData } from 'next/image'
 import user from '@/public/icons/user.svg'
 import clock from '@/public/icons/clock.svg'
 import paperclip from '@/public/icons/paperclip.svg'
 import suitcase from '@/public/icons/suitcase.svg'
-
-type CasestudyItem = {
-	id: number
-	textLeft: string
-	textRight: string
-	img: StaticImageData | string
-	alt: string
-}
+import { CasestudyItem } from '@/src/types/index'
 
 export const CasestudyItems: Record<string, CasestudyItem[]> = {
 	restauracja: [
