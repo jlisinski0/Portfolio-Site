@@ -1,11 +1,13 @@
 import { StaticImageData } from 'next/image'
 
+type ImageSrc = StaticImageData | string
+
 export type PortfolioItem = {
 	id: number
 	heading: string
 	href?: string
 	slug: string
-	img: StaticImageData | string
+	img: ImageSrc
 	alt: string
 	description: string
 }
@@ -13,11 +15,12 @@ export type PortfolioItem = {
 export type TechnologyItem = {
 	id: number
 	heading: string
+	key: string
 }
 
-export type TechnologyBlocks = {
+export type TechnologyImgs = {
 	id: number
-	img: StaticImageData | string
+	img: ImageSrc
 	alt: string
 }
 
@@ -27,6 +30,6 @@ export type CasestudyItem = {
 	id: number
 	textLeft: string
 	textRight: string
-	img: StaticImageData | string
+	img: ImageSrc
 	alt: string
 }
