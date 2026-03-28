@@ -1,6 +1,6 @@
 'use client'
 
-import { NavItems } from './NavItems'
+import { NavItems } from '@/src/data'
 import NavMobile from './NavMobile'
 import Link from 'next/link'
 import AOS from 'aos'
@@ -35,7 +35,7 @@ export default function Nav() {
 			<nav className='fixed top-0 left-0 w-full h-17 pt-3 px-10 z-30' data-aos='fade-down'>
 				<div className={`flex justify-between w-full h-full max-w-6xl mx-auto bg-white/90  border-black/10 rounded-2xl lg:px-8 ${isVisible ? 'border-none' : 'border'}`}>
 					<div className='w-full h-full'>
-						<Link href='/' className='flex items-center justify-center w-25 h-full cursor-pointer'>
+						<Link onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} href='/' className='flex items-center justify-center w-25 h-full cursor-pointer'>
 							<img src='icon' alt='icon' />
 						</Link>
 					</div>
@@ -54,7 +54,7 @@ export default function Nav() {
 					</button>
 				</div>
 			</nav>
-			<AnimatePresence>{isVisible && <NavMobile />}</AnimatePresence>
+			<AnimatePresence>{isVisible && <NavMobile state={setIsVisible} />}</AnimatePresence>
 		</>
 	)
 }

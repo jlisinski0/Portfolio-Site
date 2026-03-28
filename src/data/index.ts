@@ -1,4 +1,5 @@
 export * from './portfolio'
 export * from './casestudy'
 export * from './technology'
-
+export * from './nav'
+export * from './footer'

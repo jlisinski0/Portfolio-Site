@@ -14,7 +14,7 @@ export default function Header() {
 	}, [])
 
 	return (
-		<section className='h-[50dvh] w-ful gradient'>
+		<section className='h-[50dvh] w-ful gradient '>
 			<div className='flex items-center justify-center h-full w-full'>
 				<div className='flex flex-col justify-start items-center text-center w-full h-full px-5 pt-35' data-aos='fade-up'>
 					<h1 className='text-3xl md:text-4xl lg:text-6xl'>Jędrzej Lisiński</h1>

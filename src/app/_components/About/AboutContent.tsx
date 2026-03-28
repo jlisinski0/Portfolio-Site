@@ -29,7 +29,7 @@ export default function AboutContent() {
 					Jędrzej Lisiński
 				</h3>
 				<div className='flex' data-aos='fade-left'>
-					<a className='p-3 lg:w-12 lg:h-12' href='https://github.com/jlisinski0' rel='noopener noreferrer' target='_blank'>
+					<a className='p-3 ' href='https://github.com/jlisinski0' rel='noopener noreferrer' target='_blank'>
 						<Image src={github} alt='logo of github' width={30} height={30} />
 					</a>
 					<a className='p-3' href='mailto:jlisinski@proton.me'>

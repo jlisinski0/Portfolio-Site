@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 html {
-	scroll-behavior: smooth;
+	scroll-behavior: smooth !important;
 }
 
 @theme {
@@ -11,6 +11,7 @@ html {
 	--color-accentOne: #375ae8;
 	--color-accentTwo: #dfddce;
 	--color-green: #56e376;
+	--breakpoint-3xl: 2000px;
 	--font-arial: Arial, sans-serif;
 	--font-cormorant: var(--font-cormorant);
 
@@ -42,5 +43,5 @@ html {
 }
 
 .divContainer {
-	@apply flex flex-col justify-center w-full h-full max-w-6xl mx-auto py-20;
+	@apply flex flex-col justify-center items-center w-full h-full max-w-6xl mx-auto py-20;
 }

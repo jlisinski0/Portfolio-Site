@@ -14,7 +14,7 @@ export default function Portfolio() {
 	}, [])
 
 	return (
-		<section className='min-h-dvh w-full bg-white border border-black/5' id='Projects'>
+		<section className='flex items-center justify-center min-h-dvh w-full bg-white border border-black/5 3xl:min-h-0' id='Projects'>
 			<div className='divContainer'>
 				<div className='flex flex-col items-center'>
 					<h2 className='heading line' data-aos='fade-up'>

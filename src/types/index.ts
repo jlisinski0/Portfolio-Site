@@ -2,6 +2,12 @@ import { StaticImageData } from 'next/image'
 
 type ImageSrc = StaticImageData | string
 
+export type DefaultItem = {
+	id: number
+	name: string
+	href: string
+}
+
 export type PortfolioItem = {
 	id: number
 	heading: string
@@ -13,6 +19,12 @@ export type PortfolioItem = {
 }
 
 export type TechnologyItem = {
+	id: number
+	heading: string
+	key: string
+}
+
+export type FooterItem = {
 	id: number
 	heading: string
 	key: string

@@ -1,10 +1,6 @@
-type NavItem = {
-	id: number
-	name: string
-	href: string
-}
+import { DefaultItem } from '../types'
 
-export const NavItems: NavItem[] = [
+export const NavItems: DefaultItem[] = [
 	{
 		id: 1,
 		name: 'Projects',

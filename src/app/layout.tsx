@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Cormorant } from 'next/font/google'
 import Nav from '@/src/components/Nav'
+import Footer from '@/src/components/Footer'
 import './globals.css'
 
 const inter = Inter({
@@ -50,6 +51,7 @@ export default function RootLayout({
 			<body className={`${inter.className} ${cormorant.variable} antialiased`}>
 				<Nav />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	)
