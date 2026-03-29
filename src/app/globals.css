@@ -6,6 +6,7 @@ html {
 
 @theme {
 	--color-white: #f5f2f2;
+	--color-creamWhite: #fffbf7;
 	--color-black: #26251e;
 	--color-gray: #868484;
 	--color-accentOne: #375ae8;
@@ -14,8 +15,7 @@ html {
 	--breakpoint-3xl: 2000px;
 	--font-arial: Arial, sans-serif;
 	--font-cormorant: var(--font-cormorant);
-
-	--animate-ripple: ripple 1.5s infinite;
+	--font-librecaslon: var(--font-librecaslon) --animate-ripple: ripple 1.5s infinite;
 
 	@keyframes ripple {
 		0% {
@@ -39,9 +39,28 @@ html {
 }
 
 .heading {
-	@apply text-3xl md:text-3xl lg:text-5xl font-bold;
+	@apply text-4xl md:text-4xl lg:text-5xl font-bold font-librecaslon;
 }
 
 .divContainer {
 	@apply flex flex-col justify-center items-center w-full h-full max-w-6xl mx-auto py-20;
+}
+
+.gradientTwo {
+	background-image: linear-gradient(
+		180deg,
+		hsl(228deg 79% 56%) 1%,
+		hsl(228deg 79% 57%) 29%,
+		hsl(228deg 78% 58%) 41%,
+		hsl(228deg 77% 59%) 50%,
+		hsl(228deg 76% 60%) 58%,
+		hsl(228deg 75% 61%) 64%,
+		hsl(228deg 74% 63%) 71%,
+		hsl(228deg 73% 64%) 76%,
+		hsl(228deg 72% 65%) 82%,
+		hsl(228deg 70% 66%) 87%,
+		hsl(228deg 69% 67%) 91%,
+		hsl(228deg 68% 68%) 96%,
+		hsl(228deg 66% 69%) 100%
+	);
 }

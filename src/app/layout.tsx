@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Cormorant } from 'next/font/google'
+import { Libre_Caslon_Display } from 'next/font/google'
 import Nav from '@/src/components/Nav'
 import Footer from '@/src/components/Footer'
 import './globals.css'
@@ -12,6 +13,13 @@ const inter = Inter({
 const cormorant = Cormorant({
 	subsets: ['latin', 'latin-ext'],
 	variable: '--font-cormorant',
+})
+
+const librecaslon = Libre_Caslon_Display({
+	weight: '400',
+	subsets: ['latin', 'latin-ext'],
+	variable: '--font-librecaslon',
+	display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -48,7 +56,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${inter.className} ${cormorant.variable} antialiased`}>
+			<body className={`${inter.className} ${cormorant.variable} ${librecaslon.variable} antialiased`}>
 				<Nav />
 				{children}
 				<Footer />

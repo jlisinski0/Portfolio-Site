@@ -14,10 +14,10 @@ export default function Technology() {
 	}, [])
 
 	return (
-		<section className='flex items-center justify-center  min-h-dvh w-full bg-accentOne border border-black/5 text-white 3xl:min-h-0' id='Technology'>
+		<section className='flex items-center justify-center  min-h-dvh w-full bg-accentOne   text-white 3xl:min-h-0' id='Technology'>
 			<div className='divContainer'>
 				<div className='flex flex-col items-center'>
-					<h2 className='heading ' data-aos='fade-up'>
+					<h2 className='heading' data-aos='fade-up'>
 						Technology
 					</h2>
 					<p className='text-xs md:text-sm lg:text-base' data-aos='fade-up' data-aos-duration='1200'>
