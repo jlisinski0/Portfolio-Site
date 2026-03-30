@@ -1,4 +1,32 @@
 import ContactForm from './ContactForm'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+	title: 'Jędrzej Lisiński - Contact',
+	description: `Contact Jędrzej Lisiński - feel free to reach out for collaborations, questions.`,
+
+	alternates: {
+		canonical: 'https://jlisinski.dev/Contact',
+	},
+
+	robots: {
+		index: true,
+		follow: true,
+	},
+
+	openGraph: {
+		type: 'website',
+		title: 'Jędrzej Lisiński - Contact',
+		description: `Contact Jędrzej Lisiński - feel free to reach out for collaborations, questions.`,
+		url: 'https://jlisinski.dev/Contact',
+	},
+
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Jędrzej Lisiński - Contact',
+		description: `Contact Jędrzej Lisiński - feel free to reach out for collaborations, questions.`,
+	},
+}
 
 export default function Contact() {
 	return (
