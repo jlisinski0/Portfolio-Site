@@ -64,3 +64,20 @@ html {
 		hsl(228deg 66% 69%) 100%
 	);
 }
+
+@property --angle {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
+}
+
+.glow-border {
+	background: conic-gradient(from var(--angle), transparent 60%, #56e376, transparent 70%);
+	animation: border-spin 2s linear infinite;
+}
+
+@keyframes border-spin {
+	to {
+		--angle: 360deg;
+	}
+}

@@ -56,7 +56,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${inter.className} ${cormorant.variable} ${librecaslon.variable} antialiased`}>
+			<body className={`${inter.className} ${cormorant.variable} ${librecaslon.variable}  antialiased`}>
 				<Nav />
 				{children}
 				<Footer />
