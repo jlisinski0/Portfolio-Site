@@ -14,7 +14,7 @@ export default function Technology() {
 	}, [])
 
 	return (
-		<section className='flex items-center justify-center  min-h-dvh w-full bg-accentOne   text-white 3xl:min-h-0' id='Technology'>
+		<section className='flex items-center justify-center  min-h-dvh w-full bg-accentOne   text-white 3xl:min-h-0' id='technology'>
 			<div className='divContainer'>
 				<div className='flex flex-col items-center'>
 					<h2 className='heading' data-aos='fade-up'>

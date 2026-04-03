@@ -4,22 +4,22 @@ export const NavItems: DefaultItem[] = [
 	{
 		id: 1,
 		name: 'Projects',
-		href: '/#Projects',
+		href: '/#projects',
 	},
 	{
 		id: 2,
 		name: 'About',
-		href: '/#About',
+		href: '/#about',
 	},
 	{
 		id: 3,
 		name: 'Technology',
-		href: '/#Technology',
+		href: '/#technology',
 	},
 
 	{
 		id: 4,
 		name: 'Contact',
-		href: '/Contact',
+		href: '/contact',
 	},
 ]

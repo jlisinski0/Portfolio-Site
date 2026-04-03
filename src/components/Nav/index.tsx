@@ -3,6 +3,8 @@
 import { NavItems } from '@/src/data'
 import NavMobile from './NavMobile'
 import Link from 'next/link'
+import icon from '@/public/logo.png'
+import Image from 'next/image'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useState, useEffect } from 'react'
@@ -36,7 +38,7 @@ export default function Nav() {
 				<div className={`flex justify-between w-full h-full max-w-6xl mx-auto bg-white/90  border-black/10 rounded-2xl lg:px-8 ${isVisible ? 'border-none' : 'border'}`}>
 					<div className='w-full h-full'>
 						<Link onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} href='/' className='flex items-center justify-center w-25 h-full cursor-pointer'>
-							<img src='icon' alt='icon' />
+							<Image src={icon} alt='icon' width={35} height={35} />
 						</Link>
 					</div>
 					<ul className='hidden lg:flex lg:justify-end lg:items-center w-full h-full gap-10'>

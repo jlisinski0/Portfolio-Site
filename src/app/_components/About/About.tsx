@@ -14,7 +14,7 @@ export default function About() {
 	}, [])
 
 	return (
-		<section className=' min-h-[70dvh] w-full bg-white 3xl:min-h-0' id='About'>
+		<section className=' min-h-[70dvh] w-full bg-white 3xl:min-h-0' id='about'>
 			<div className='divContainer'>
 				<div className='flex flex-col items-center w-full h-full'>
 					<h2 className='heading line' data-aos='fade-up'>

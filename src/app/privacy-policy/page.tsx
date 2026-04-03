@@ -1,12 +1,13 @@
-import ContactForm from './ContactForm'
 import { Metadata } from 'next'
+import PrivacyPolicyItems from './PrivacyPolicyItems'
+
 
 export const metadata: Metadata = {
 	title: 'Jędrzej Lisiński - Contact',
 	description: `Contact Jędrzej Lisiński - feel free to reach out for collaborations, questions.`,
 
 	alternates: {
-		canonical: 'https://jlisinski.dev/contact',
+		canonical: 'https://jlisinski.dev/privacy-policy',
 	},
 
 	robots: {
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 		type: 'website',
 		title: 'Jędrzej Lisiński - Contact',
 		description: `Contact Jędrzej Lisiński - feel free to reach out for collaborations, questions.`,
-		url: 'https://jlisinski.dev/contact',
+		url: 'https://jlisinski.dev/privacy-policy',
 	},
 
 	twitter: {
@@ -32,9 +33,9 @@ export default function Contact() {
 	return (
 		<div className='min-h-dvh w-full bg-white  pt-15'>
 			<div className='divContainer'>
-				<h1 className='heading'>Contact</h1>
-				<p className='text-xs md:text-sm lg:text-base'>Let's build something together</p>
-				<ContactForm />
+				<h1 className='heading'>Privacy Policy</h1>
+				<PrivacyPolicyItems />
+				
 			</div>
 		</div>
 	)

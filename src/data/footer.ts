@@ -19,34 +19,29 @@ export const FooterItems: Record<string, DefaultItem[]> = {
 		{
 			id: 1,
 			name: 'Projects',
-			href: '#Projects',
+			href: '#projects',
 		},
 		{
 			id: 2,
 			name: 'About',
-			href: '#About',
+			href: '#about',
 		},
 		{
 			id: 3,
 			name: 'Technology',
-			href: '#Technology',
+			href: '#technology',
 		},
 	],
 	other: [
 		{
 			id: 1,
-			name: 'Rules',
-			href: '/Rules',
+			name: 'Privacy Policy ',
+			href: '/privacy-policy ',
 		},
 		{
 			id: 2,
-			name: 'Privacy Policy ',
-			href: 'Privacy-Policy ',
-		},
-		{
-			id: 3,
 			name: 'Contact',
-			href: '/Contact',
+			href: '/contact',
 		},
 	],
 }
