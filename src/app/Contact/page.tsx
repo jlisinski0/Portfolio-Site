@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
 	return (
-		<div className='min-h-dvh w-full bg-white  pt-15'>
+		<div className='min-h-dvh w-full bg-white  pt-15 3xl:min-h-0'>
 			<div className='divContainer'>
 				<h1 className='heading'>Contact</h1>
 				<p className='text-xs md:text-sm lg:text-base'>Let's build something together</p>

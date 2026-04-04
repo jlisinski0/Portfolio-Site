@@ -45,3 +45,5 @@ export type CasestudyItem = {
 	img: ImageSrc
 	alt: string
 }
+
+export type CasestudyImg = Pick<CasestudyItem, 'id' | 'img' | 'alt'>

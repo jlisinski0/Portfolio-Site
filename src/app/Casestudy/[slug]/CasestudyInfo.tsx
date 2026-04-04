@@ -7,7 +7,7 @@ type CasestudyInfoProps = {
 
 export default function CasestudyInfo({ item }: CasestudyInfoProps) {
 	return (
-		<div className='flex flex-col justify-center w-full lg:w-100 h-125'>
+		<div className='flex flex-col  justify-center w-full lg:w-100 lg:h-70 lg:sticky lg:top-20 lg:self-start'>
 			<h3 className='font-medium text-xl pb-10'>Information about project</h3>
 			<CasestudyRow item={item} />
 		</div>
