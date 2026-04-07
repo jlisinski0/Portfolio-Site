@@ -1,8 +1,9 @@
-import { CasestudyText, PortfolioItems } from '@/src/data'
+import { PortfolioItems } from '@/src/data'
 import CasestudyInfo from './CasestudyInfo'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import ImageSlider from './ImageSlider'
+import { CasestudyContent } from '../data'
 
 export async function generateStaticParams() {
 	return PortfolioItems.map(item => ({
@@ -47,7 +48,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export default async function Casestudy({ params }: { params: { slug: string } }) {
 	const { slug } = await params
 	const item = PortfolioItems.find(i => i.slug === slug)
-	const casestudyItem = CasestudyText[slug] ?? []
+
+	const Content = CasestudyContent[slug]
 
 	if (!item) return notFound()
 
@@ -59,14 +61,7 @@ export default async function Casestudy({ params }: { params: { slug: string } }
 					<h1 className='bg-linear-to-l from-black/1 to-accentOne bg-clip-text text-transparent  text-center text-2xl w-full h-full  sm:text-3xl uppercase font-bold pt-10 pb-5 lg:pt-0'>
 						{item.heading}
 					</h1>
-					<div className='flex flex-col gap-5 py-10'>
-						{casestudyItem.map(caseItem => (
-							<div className='flex flex-col gap-5 py-4' key={caseItem.id}>
-								<h4 className='bg-linear-to-r from-accentOne to-creamWhite bg-clip-text text-transparent font-medium text-lg'>{caseItem.heading}</h4>
-								<p className='text-base'>{caseItem.text}</p>
-							</div>
-						))}
-					</div>
+					{Content ? <Content /> : <p>No content.</p>}
 					<h4 className='bg-linear-to-r from-accentOne to-creamWhite bg-clip-text text-transparent  text-lg font-medium pt-3'>Showcase:</h4>
 					<ImageSlider item={item} />
 				</div>

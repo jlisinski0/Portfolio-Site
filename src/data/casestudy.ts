@@ -128,27 +128,3 @@ export const CasestudyImages: Record<string, CasestudyImg[]> = {
 	],
 }
 
-export const CasestudyText: Record<string, CasestudyTexts[]> = {
-	jlisinski: [
-		{
-			id: 1,
-			heading: 'Challenge',
-			text: "Cobbler's children have no shoes - a classic story. I was building websites for clients while having none of my own. Time to fix that and create a place that speaks for me better than any CV ever could.",
-		},
-		{
-			id: 2,
-			heading: 'Process',
-			text: "14 days. That's how long it took me to design and ship the site from scratch. The stack was a deliberate choice - Next.js and React as a solid foundation, Tailwind CSS for efficient layout building, Motion and AOS for animations that add personality without overdoing it. Most of the effort went into the individual case study pages - every project deserves its own story, not just a thumbnail in a grid.",
-		},
-		{
-			id: 3,
-			heading: 'Result',
-			text: "A site that works like the best salesperson - available 24/7, speaks the client's language, and showcases real projects in full detail. No fluff, just substance.",
-		},
-		{
-			id: 4,
-			heading: 'Technology',
-			text: 'Next.js · React · Tailwind CSS · Motion · AOS',
-		},
-	],
-}
