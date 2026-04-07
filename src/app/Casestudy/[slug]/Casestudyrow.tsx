@@ -21,7 +21,15 @@ export default function CasestudyItem({ item }: CasestudyInfoProps) {
 								<Image className='w-7' src={casestudyItem.img} alt={casestudyItem.alt} />
 								<p>{casestudyItem.textLeft}</p>
 							</div>
-							<p>{casestudyItem.textRight}</p>
+							<p>
+								{casestudyItem.href ? (
+									<a href={casestudyItem.href} target='_blank' rel='noopener noreferrer' className=' hover:text-accentOne transition-colors duration-300'>
+										{casestudyItem.textRight}
+									</a>
+								) : (
+									casestudyItem.textRight
+								)}
+							</p>
 						</div>
 						<div className='w-full bg-black/20 h-px my-2'></div>
 					</div>

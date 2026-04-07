@@ -1,10 +1,11 @@
 import { PortfolioItem } from '@/src/types/index'
-import restaurant from '@/public/restaurant.png'
+import restaurant from '@/public/images/restauracja1.png'
+import jlisinski from '@/public/images/jlisinskidev1.png'
 
 export const PortfolioItems: PortfolioItem[] = [
 	{
 		id: 1,
-		heading: 'Restauracja.pl',
+		heading: 'restauracja.pl',
 		slug: 'restauracja',
 		href: '/casestudy/restauracja',
 		img: restaurant,
@@ -16,7 +17,7 @@ export const PortfolioItems: PortfolioItem[] = [
 		heading: 'jlisinski.dev',
 		slug: 'jlisinski',
 		href: '/casestudy/jlisinski',
-		img: restaurant,
+		img: jlisinski,
 		alt: 'jlisinski.pl',
 		description: 'asd',
 	},

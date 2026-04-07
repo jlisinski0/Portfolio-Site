@@ -44,6 +44,13 @@ export type CasestudyItem = {
 	textRight: string
 	img: ImageSrc
 	alt: string
+	href?: string
+}
+
+export type CasestudyTexts = {
+	id: number
+	heading: string
+	text: string
 }
 
 export type CasestudyImg = Pick<CasestudyItem, 'id' | 'img' | 'alt'>

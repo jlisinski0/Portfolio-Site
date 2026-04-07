@@ -22,7 +22,7 @@ export default function PortfolioBlock() {
 					{PortfolioItems.map(({ id, heading, img, alt, href }) => (
 						<a href={href} className='flex flex-col items-center cursor-pointer group' data-aos='fade-up' key={id}>
 							<h3 className='text-lg md:text-xl lg:text-2xl text-black font-bold pb-2'>{heading}</h3>
-							<Image className='rounded-2xl w-70 border border-black/5  blur-[0.5px] transition-all duration-300 group-hover:brightness-75' src={img} alt={alt} />
+							<Image className='rounded-2xl w-70 border border-black/5  blur-[0.5px] transition-all duration-300 group-hover:brightness-75' src={img} alt={alt} width={200} height={200} />
 						</a>
 					))}
 				</div>
